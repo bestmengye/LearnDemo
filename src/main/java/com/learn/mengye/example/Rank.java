@@ -2,6 +2,7 @@ package com.learn.mengye.example;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * @author MengYe
@@ -42,7 +43,8 @@ public class Rank {
 
             doExchange(all);
 
-
+            Random random =new Random();
+            int i = random.nextInt(99);
 
 
 
