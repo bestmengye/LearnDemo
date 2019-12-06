@@ -1,5 +1,7 @@
 package com.learn.mengye.io;
 
+import java.io.FileInputStream;
+
 /**
  * @author MengYe
  * @desc 编码相关
@@ -35,13 +37,7 @@ public class Encode {
         String s =new String(bytes);
         System.out.println(s);
         //bytes1是gbk编码 项目默认是使用utf-8 所以乱码
-        String s1 =new String(bytes1);
+        String s1 =new String(bytes1,"gbk");
         System.out.println(s1);
-
-
-
-
-
-
     }
 }
