@@ -1,4 +1,4 @@
-package com.learn.mengye.io;
+package com.learn.mengye.io.image;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -11,15 +11,18 @@ import java.util.Map;
 
 /**
  * @author MengYe
- * @desc 计算图片的宽和高
- * @date 2019/12/10 15:10
+ * @desc desc
+ * @date 2019/12/13 17:28
  */
-public class TestMain {
+public class GetImageWidthAndHeight {
     public static void main(String[] args) {
-
         String url ="http://picture.seeyouplan.com/Fioc_WULxJiMIyOts074MFpzDjV4";
         initPicWidthAndHeight(url);
+
     }
+
+
+
 
     public static Map initPicWidthAndHeight(String url) {
         // 如果是图片，需要计算第一张图片的宽高，所有图片的比例相同
@@ -42,7 +45,4 @@ public class TestMain {
         }
         return null;
     }
-
-
-
 }

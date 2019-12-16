@@ -8,18 +8,18 @@ import java.util.Random;
 
 /**
  * @author MengYe
- * @desc 文件类
+ * @desc 文件类、获取当前项目路径
  * @date 2019/12/5 9:40
  */
-public class TestFile {
+public class GetFilePath {
 
     /**
      * 获取当前项目路径的几种方式
      */
-    public  void getDemoPath()throws IOException {
-        String path = this.getClass().getResource("").getPath();
+    public void getDemoPath()throws IOException {
+        String path = getClass().getResource("").getPath();
         System.out.println("第一种:"+path);
-        URL xmlpath = this.getClass().getClassLoader().getResource("text.txt");
+        URL xmlpath = getClass().getClassLoader().getResource("text.txt");
         System.out.println("第二种:"+xmlpath);
         String property = System.getProperty("java.class.path");
         System.out.println("第三种:"+property);
@@ -31,23 +31,18 @@ public class TestFile {
     }
 
     public static void main(String[] args) throws Exception {
-        //读取项目中的文本文件
-        File file = new File("src/main/resources/text.txt");
-        if (file.exists()) {
-           /* System.out.println(file.getName());
-            System.out.println(file.getAbsoluteFile());
-            System.out.println(file.getFreeSpace());
-            System.out.println(file.getParentFile());
-            System.out.println(file.getCanonicalFile());*/
-        }
+        GetFilePath getFilePath=new GetFilePath();
+        getFilePath.getDemoPath();
 
+        /*
+        使用buffreader读取文件
         String str = "";
-        String s ="";
+        String s;
         BufferedReader reader = new BufferedReader(new FileReader(System.getProperty("user.dir") + "/src/main/resources/text.txt"));
         while ((s=reader.readLine()) != null) {
             str += s+"\n";
         }
-        System.out.println(str);
+        System.out.println(str);*/
 
     }
 }
