@@ -1,5 +1,6 @@
 package com.learn.mengye.domain;
 
+import com.learn.mengye.excel.ExcelProperty;
 import lombok.Data;
 
 /**
@@ -10,9 +11,10 @@ import lombok.Data;
 @Data
 public class Student {
 
+    @ExcelProperty(index = 0)
     private String stuNo;
-
-    private int age;
-
+    @ExcelProperty(index = 1)
+    private Integer age;
+    @ExcelProperty(index = 2)
     private String name;
 }
