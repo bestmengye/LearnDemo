@@ -3,6 +3,8 @@ package com.learn.mengye.domain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.util.Comparator;
+
 /**
  * @author MengYe
  * @desc 学生类
@@ -10,17 +12,14 @@ import lombok.Data;
  */
 @Data
 @AllArgsConstructor
-public class Student implements Comparable<Student>{
+public class StudentOrder implements Comparator<StudentOrder> {
 
     private String stuNo;
     private Integer age;
     private String name;
 
-
     @Override
-    public int compareTo(Student o) {
-        //升序
-        //return age.compareTo(o.getAge());
-        return o.getAge().compareTo(age);
+    public int compare(StudentOrder o1, StudentOrder o2) {
+        return o1.getAge().compareTo(o2.getAge());
     }
 }
