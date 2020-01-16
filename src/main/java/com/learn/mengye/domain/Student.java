@@ -2,6 +2,7 @@ package com.learn.mengye.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author MengYe
@@ -10,6 +11,7 @@ import lombok.Data;
  */
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class Student implements Comparable<Student>{
 
     private String stuNo;
