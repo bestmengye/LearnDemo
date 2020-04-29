@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 /**
  * @author MengYe
  * @desc 学生类
@@ -12,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Student implements Comparable<Student>{
+public class Student implements Comparable<Student>, Serializable {
 
     private String stuNo;
     private Integer age;

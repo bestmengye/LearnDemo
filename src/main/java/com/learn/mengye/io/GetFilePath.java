@@ -19,13 +19,17 @@ public class GetFilePath {
     public void getDemoPath()throws IOException {
         String path = getClass().getResource("").getPath();
         System.out.println("第一种:"+path);
+
         URL xmlpath = getClass().getClassLoader().getResource("text.txt");
         System.out.println("第二种:"+xmlpath);
+
         String property = System.getProperty("java.class.path");
         System.out.println("第三种:"+property);
+
         File file=new File("");
         File canonicalFile = file.getCanonicalFile();
         System.out.println("第四种:"+canonicalFile);
+
         String property1 = System.getProperty("user.dir");
         System.out.println("第五种:"+property1);
     }
